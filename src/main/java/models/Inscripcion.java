@@ -25,6 +25,13 @@ public class Inscripcion {
     }
     // endregion
 
+    // region Constructors
+    public Inscripcion(Alumno alumno, Materia[] materiasInscriptas) {
+        this.alumno = alumno;
+        this.materiasInscriptas = materiasInscriptas;
+    }
+    // endregion
+
     // region Methods
     public boolean aprobada() {
         for(int i = 0; i < materiasInscriptas.length; i++) {
