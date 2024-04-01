@@ -2,6 +2,8 @@
 
 class Alumno {
     Materia[] materiasAprobadas
+
+    +boolean PuedeCursar()
 }
 
 class Inscripcion {
