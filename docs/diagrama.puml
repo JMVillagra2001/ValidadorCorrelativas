@@ -1,0 +1,23 @@
+@startuml
+
+class Alumno {
+    Materia[] materiasAprobadas
+}
+
+class Inscripcion {
+    Alumno alumno
+    Materia[] materiasInscripto
+
+    +boolean aprobada()
+}
+
+class Materia {
+    String nombre
+    Materia[] materiasCorrelativas
+}
+
+Alumno "1" --> "*" Materia
+Inscripcion --* Alumno
+Inscripcion "1" --* "*" Materia
+
+@enduml
