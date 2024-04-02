@@ -34,6 +34,10 @@ public class Inscripcion {
 
     // region Methods
     public boolean aprobada() {
+        if(materiasInscriptas.length == 0) {
+            return false;
+        }
+
         for(int i = 0; i < materiasInscriptas.length; i++) {
             if(!alumno.PuedeCursar(materiasInscriptas[i])) {
                 return false;
